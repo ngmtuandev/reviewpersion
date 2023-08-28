@@ -3,13 +3,7 @@ import { data } from "./data";
 import Card from "./Card";
 import Direction from "./Direction";
 import Button from "./Button";
-type TPerson = {
-  id: number;
-  img: string;
-  name: string;
-  work: string;
-  desc: string;
-};
+
 const Cards = () => {
   const [dataPerson, setDataPerson] = useState(data);
   const [dataCurrent, setDataCurrent] = useState([dataPerson[0]]);
@@ -29,13 +23,14 @@ const Cards = () => {
   };
 
   return (
-    <div>
-      <div>
-        <Card index={1} data={dataCurrent}></Card>
-      </div>
+    <div className="flex flex-col justify-center items-center">
+      <Card index={1} data={dataCurrent}></Card>
 
       <Direction index={curr} setCurr={setCurr}></Direction>
-      <Button onRandomPerson={handleRandomPerson} text={"Nhấn"}></Button>
+      <Button
+        onRandomPerson={handleRandomPerson}
+        text={"Subscribe Me"}
+      ></Button>
     </div>
   );
 };

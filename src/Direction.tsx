@@ -19,15 +19,17 @@ const Direction = ({ index, setCurr }: TData) => {
     }
   };
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex -mt-6 justify-center items-center">
       <div
-        className="px-4 w-[30px] py-2 bg-red-600 text-gray-100"
+        className="px-4 mx-4 w-[60px] rounded-md py-1 cursor-pointer hover:opacity-90
+         bg-red-600 text-gray-100 flex justify-center items-center"
         onClick={handleLeft}
       >
         Left
       </div>
       <div
-        className="px-4 w-[30px] py-2 bg-red-600 text-gray-100"
+        className="px-4 mx-4 w-[60px] rounded-md py-1 cursor-pointer hover:opacity-90
+         bg-red-600 text-gray-100 flex justify-center items-center"
         onClick={handleRight}
       >
         Right
